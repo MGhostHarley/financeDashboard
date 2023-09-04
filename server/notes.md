@@ -9,3 +9,5 @@ add "test?retryWrites" to mongo uri
 
 
 flexbasis
+
+cmd shift l

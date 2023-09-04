@@ -12,16 +12,32 @@ const Navbar = (props: Props) => {
   return (
     <FlexBetween mb="0.25rem" p="0.5rem 0rem" color={palette.grey[300]}>
       {/* LEFT SIDE */}
-      <FlexBetween gap="0.75rem">
-        <PixIcon sx={{ fontSize: "28px" }} />
-        <Typography variant="h4" fontSize="16px">
-          Finanseer
-        </Typography>
-      </FlexBetween>
+      <Link
+        to="/"
+        style={{
+          textDecoration: "none",
+        }}
+      >
+        <FlexBetween gap="0.75rem">
+          <PixIcon
+            sx={{
+              fontSize: "28px",
+              "&:hover": { color: palette.primary[200] },
+            }}
+          />
+          <Typography
+            variant="h4"
+            fontSize="16px"
+            sx={{ "&:hover": { color: palette.primary[200] } }}
+          >
+            BikeStar
+          </Typography>
+        </FlexBetween>
+      </Link>
 
       {/* RIGHT SIDE */}
       <FlexBetween gap="2rem">
-        <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
+        <Box sx={{ "&:hover": { color: palette.primary[200] } }}>
           <Link
             to="/"
             onClick={() => setSelected("dashboard")}
@@ -33,7 +49,7 @@ const Navbar = (props: Props) => {
             dashboard
           </Link>
         </Box>
-        <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
+        <Box sx={{ "&:hover": { color: palette.primary[200] } }}>
           <Link
             to="/predictions"
             onClick={() => setSelected("predictions")}
