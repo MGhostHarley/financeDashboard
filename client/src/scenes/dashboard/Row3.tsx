@@ -210,7 +210,7 @@ const Row3 = () => {
             width="40%"
           ></Box>
         </Box>
-        <Typography margin="0 1rem" variant="h4">
+        <Typography margin="0 1rem" variant="h5">
           We initially expected weaker demand as interest rates continued to
           rise. However, customer spending has remained robust. Combined with
           lessening inflation due to easing supply chain issues, we have been

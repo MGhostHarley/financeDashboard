@@ -28,7 +28,12 @@ const Navbar = (props: Props) => {
           <Typography
             variant="h4"
             fontSize="16px"
-            sx={{ "&:hover": { color: palette.primary[200] } }}
+            sx={{
+              "&:hover": {
+                color: palette.primary[200],
+              },
+              color: palette.primary[300],
+            }}
           >
             BikeStar
           </Typography>
@@ -39,7 +44,7 @@ const Navbar = (props: Props) => {
       <FlexBetween gap="2rem">
         <Box sx={{ "&:hover": { color: palette.primary[200] } }}>
           <Link
-            to="/"
+            to="/dashboard"
             onClick={() => setSelected("dashboard")}
             style={{
               color: selected === "dashboard" ? "inherit" : palette.grey[700],
@@ -59,6 +64,18 @@ const Navbar = (props: Props) => {
             }}
           >
             predictions
+          </Link>
+        </Box>
+        <Box sx={{ "&:hover": { color: palette.primary[200] } }}>
+          <Link
+            to="/about"
+            onClick={() => setSelected("about")}
+            style={{
+              color: selected === "about" ? "inherit" : palette.grey[700],
+              textDecoration: "inherit",
+            }}
+          >
+            about
           </Link>
         </Box>
       </FlexBetween>
