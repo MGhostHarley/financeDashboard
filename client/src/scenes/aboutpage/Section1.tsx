@@ -1,5 +1,6 @@
 import DashboardBox from "@/components/DashboardBox";
 import { Box, useTheme } from "@mui/material";
+import { me } from "../../assets";
 
 import SocialMediaIcons from "@/components/SocialMediaIcons";
 
@@ -23,7 +24,7 @@ const AboutMe = () => {
           borderStyle: "Solid",
         }}
         alt="Up Up And A Way"
-        src="/assets/turkey.jpeg"
+        src={me}
       />
       <div
         style={{
