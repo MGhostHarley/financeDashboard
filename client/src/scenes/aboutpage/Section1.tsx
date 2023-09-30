@@ -23,7 +23,7 @@ const AboutMe = () => {
           borderStyle: "Solid",
         }}
         alt="Up Up And A Way"
-        src="/src/assets/turkey.jpeg"
+        src="../assets/turkey.jpeg"
       />
       <div
         style={{
