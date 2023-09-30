@@ -36,7 +36,7 @@ app.use("/transaction", transactionRoutes);
 const PORT = process.env.PORT || 9000;
 mongoose
   .connect(process.env.MONGO_URL, {
-    useNewUrlParser: false,
+    useNewUrlParser: true,
     useUnifiedTopology: true,
   })
   .then(async () => {
