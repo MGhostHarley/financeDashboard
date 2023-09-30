@@ -8,7 +8,7 @@ import {
 } from "@/state/api";
 import { Box, Typography, useTheme } from "@mui/material";
 import { DataGrid, GridCellParams } from "@mui/x-data-grid";
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import { Cell, Pie, PieChart } from "recharts";
 
 const Row3 = () => {
@@ -21,12 +21,7 @@ const Row3 = () => {
 
   const pieChartData = useMemo(() => {
     if (kpiData) {
-      console.log("file: Row3.tsx:24 > pieChartData > kpiData:", kpiData);
       const totalExpenses = kpiData[0].totalExpenses;
-      console.log(
-        "file: Row3.tsx:25 > pieChartData > totalExpenses:",
-        totalExpenses
-      );
 
       return Object.entries(kpiData[0].expensesByCategory).map(([key, v]) => {
         let value: number = v / 100;
@@ -180,9 +175,7 @@ const Row3 = () => {
                   paddingAngle={2}
                   dataKey="value"
                 >
-                  {console.log(data)}
-
-                  {data.map((entry, index) => (
+                  {data.map((_, index) => (
                     <Cell key={`cell-${index}`} fill={pieColors[index]} />
                   ))}
                 </Pie>

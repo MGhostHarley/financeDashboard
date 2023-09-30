@@ -3,9 +3,7 @@ import { Box, useTheme } from "@mui/material";
 
 import SocialMediaIcons from "@/components/SocialMediaIcons";
 
-type Props = {};
-
-const AboutMe = (props: Props) => {
+const AboutMe = () => {
   const { palette } = useTheme();
   return (
     <>
@@ -49,7 +47,7 @@ const AboutMe = (props: Props) => {
   );
 };
 
-const AboutBikeStar = (props: Props) => {
+const AboutBikeStar = () => {
   return (
     <>
       <div
@@ -90,7 +88,7 @@ const AboutBikeStar = (props: Props) => {
     </>
   );
 };
-const ContactMe = (props: Props) => {
+const ContactMe = () => {
   return (
     <>
       <div
@@ -112,7 +110,7 @@ const ContactMe = (props: Props) => {
   );
 };
 
-const Section1 = (props: Props) => {
+const Section1 = () => {
   return (
     <>
       <DashboardBox gridArea="a">
